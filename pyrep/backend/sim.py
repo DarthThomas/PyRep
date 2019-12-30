@@ -6,13 +6,13 @@ import numpy as np
 def _check_return(ret):
     if ret < 0:
         raise RuntimeError(
-            'The call failed on the V-REP side. Return value: %d' % ret)
+            'The call failed on the CoppeliaSim side. Return value: %d' % ret)
 
 
 def _check_null_return(val):
     if val == ffi.NULL:
         raise RuntimeError(
-            'The call failed on the V-REP side by returning null.')
+            'The call failed on the CoppeliaSim side by returning null.')
 
 
 def _check_set_object_parameter(ret):
